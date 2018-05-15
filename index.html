@@ -1,0 +1,36 @@
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+	<title>ngNineBox Directive</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css" />
+</head>
+<body ng-controller="mainController">
+    <div style="margin:0 auto;width:800px">
+    <h2>ngNineBox Directive</h2>
+	
+	<ng-nine-box data="arr" title="Título do 9Box" background="#FFF" width="800" height="800" lines="70,90,70,90" ></ng-nine-box>
+    
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery.jqplot.js" type="text/javascript"></script>
+	<script src="plugins/jqplot.bubbleRenderer.js" type="text/javascript"></script>
+	<script src="plugins/jqplot.canvasOverlay.js" type="text/javascript"></script>
+	<script src="plugins/jqplot.highlighter.js" type="text/javascript"></script>
+	<script src="plugins/jqplot.categoryAxisRenderer.js" type="text/javascript"></script>
+	<script src="plugins/jqplot.canvasTextRenderer.js" type="text/javascript"></script>
+	<script src="plugins/jqplot.canvasAxisLabelRenderer.js" type="text/javascript" ></script>	
+	<script src="plugins/jqplot.cursor.js" type="text/javascript"></script>
+	<script src="js/angular.min.js" type="text/javascript"></script>
+	<script src="js/ng-nine-box.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+        angular.module('app', ['ngNineBox']).controller('mainController', function($scope) {
+			
+			$scope.arr = [
+				[50, 80, 1, 'Guilherme'], [90, 85, 1, 'Kairan'], [85, 81, 1, 'Arthur'] 
+			];
+			
+        });
+
+	</script>
+</body>
+</html>
